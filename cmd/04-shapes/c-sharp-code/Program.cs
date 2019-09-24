@@ -37,7 +37,7 @@ namespace training_demo_csharp
 
     public class Square : Shape
     {
-        public double Width { get; private set; }
+        public double Width { get;  }
 
         public Square(string colour, double width) : base(colour)
         {
@@ -52,7 +52,7 @@ namespace training_demo_csharp
 
     public class Circle : Shape
     {
-        public double Radius { get; set; }
+        public double Radius { get; }
         public Circle(string colour, double radius) : base(colour)
         {
             Radius = radius;
