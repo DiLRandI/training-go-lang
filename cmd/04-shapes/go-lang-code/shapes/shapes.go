@@ -2,25 +2,27 @@ package shapes
 
 import "math"
 
-type Shape interface {
+type IShape interface {
 	GetArea() float64
 }
 
-type stringColor string
+type shape struct {
+	color string
+}
 
-func (c stringColor) GetColor() string {
-	return string(c)
+func (s shape) GetColor() string {
+	return s.color
 }
 
 type Square struct {
-	stringColor
+	shape
 	width int
 }
 
 func NewSquare(color string, width int) *Square {
 	return &Square{
-		stringColor: stringColor(color),
-		width:       width,
+		shape: shape{color},
+		width: width,
 	}
 }
 
@@ -29,14 +31,14 @@ func (s *Square) GetArea() float64 {
 }
 
 type Circle struct {
-	stringColor
+	shape
 	radius int
 }
 
-func NewCircle(s string, radius int) *Circle {
+func NewCircle(color string, radius int) *Circle {
 	return &Circle{
-		stringColor: stringColor(s),
-		radius:      radius,
+		shape:  shape{color},
+		radius: radius,
 	}
 }
 
