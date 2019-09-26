@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/dilrandi/training-go-lang/cmd/04-shapes/go-lang-code/shapes"
+	"github.com/dilrandi/training-go-lang/cmd/09-shapes/go-lang-code/shapes"
 )
 
 func main() {
